@@ -66,3 +66,5 @@ function writeYourGenres () {
 
 writeYourGenres();
 dfwfwd
+
+console.log("pososi");
