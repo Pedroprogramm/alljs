@@ -65,6 +65,7 @@ function writeYourGenres () {
 }}
 
 writeYourGenres();
-dfwfwd
 
 console.log("pososi");
+
+convert = function  convert                                         
