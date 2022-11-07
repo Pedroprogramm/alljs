@@ -49,3 +49,4 @@ for (let key in options) {
     console.log (Object.keys(options))
     // Название ключей (свойств)
     // .length по номерам
+    121

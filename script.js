@@ -66,6 +66,3 @@ function writeYourGenres () {
 
 writeYourGenres();
 
-console.log("pososi");
-
-convert = function  convert                                         
