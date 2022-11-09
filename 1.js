@@ -106,3 +106,31 @@ console.log(three);
 
  console.log(number);
 //  более короткое копирование
+
+const oldSpreatMassive = [322, 511, 1 ,2 , "12", "13", "14"],
+      oldSpreatObject = {
+        a : true, 
+        b : 12,
+        c : 1,
+        d : {
+            d1 : 12,
+            d2 : 13,
+        }
+      };
+
+const newSpreatMassive = [...oldSpreatMassive, 3, 4];
+// spreat для массива
+const newSpreatObject = {
+    ...oldSpreatObject,
+    e : 12,
+    f :12
+}
+// spreat для обьекта
+
+newSpreatObject.d.d1 = 11;
+
+console.log(newSpreatMassive);
+console.log(newSpreatObject);
+console.log(oldSpreatObject);
+// не копирует обьект в обьекте
+q
