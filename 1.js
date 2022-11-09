@@ -71,3 +71,38 @@ for (let key in options) {
 // Название ключей (свойств)
 // .length по номерам
     
+const first ={a : 
+        {a1 : 1,
+         a2 : {
+            a22 : 22,
+            a23 : 23
+},  
+    a3 : 3},   
+    b : 10,  
+    c : 11,  
+    d : 12,};
+
+function copy(mainfirst) {
+    let second = {}; 
+    let key;
+    let i;
+    for (key in mainfirst) {
+        second[key] = mainfirst[key];
+        for (i in mainfirst[key]) {
+            second[key][i] = mainfirst[key][i];
+        }}    
+        return second; }
+
+    const three = copy(first);
+    three.d = 1;
+    three.a.a3 = 1;
+
+console.log(first);
+console.log(three);
+// копирование  
+
+ const number = (Object.assign(three));
+ number.c = 1;
+
+ console.log(number);
+//  более короткое копирование
