@@ -1,24 +1,26 @@
-let curr = +prompt ('Какую валюты вы хотите обменять?', '');
-let convert = +prompt ('На какую валюту вы хотите поменять,', '');
+let curr = prompt ('Какую валюты вы хотите обменять?', '');
+let convert = prompt ('На какую валюту вы хотите поменять,', '');
 let amount = +prompt ('Сколько вы хотите обменять?', '');
 
+if (curr = 'Euro') { let currs = 1 ;
+} else if (curr = 'Dollar') { let currs = 1 ;
+} else if (curr ='Rub') { let currs = 1 ;
+} else if (curr = 'Pln') { let currs = 1 ;};
 
-if (curr = 'Euro') { let curr = 1 ;
-} else if (curr = 'Dollar') { let curr = 1 ;
-} else if (curr ='Rub') { let curr = 1 ;
-} else if (curr = 'Pln') { let curr = 1 ;}
+if (convert = 'Euro') { let converts = 3 ;
+} else if (convert = 'Dollar') { let converts = 6 ;
+} else if (convert = 'Rub') { let converts = 11 ;
+} else if (convert = 'Pln') { let converts = 5 ;};
 
-if (convert = 'Euro') { let convert = 3 ;
-} else if (convert = 'Dollar') { let convert = 6 ;
-} else if (convert = 'Rub') { let convert = 11 ;
-} else if (convert = 'Pln') { let convert = 5 ;}
+let cur = currs;
+let con = converts;
 
 console.log(convert);
 
-function conv (amount, convert) {
-    console.log(amount * convert) }
+function conv (currs, converts) {
+    console.log(currs * converts) }
 
-conv(amount, convert);
+conv(currs, converts);
 
 
 
@@ -133,4 +135,4 @@ console.log(newSpreatMassive);
 console.log(newSpreatObject);
 console.log(oldSpreatObject);
 // не копирует обьект в обьекте
-q
+
