@@ -149,3 +149,91 @@ return myFunction;
 const increment = createCounter();
 const c1 = increment();
 console.log(increment , c1); 
+
+document.querySelectorAll
+
+
+let students = {
+    js: [{
+        name: 'John',
+        progress: 100
+    }, {
+        name: 'Ivan',
+        progress: 60
+    }],
+
+    html: {
+        basic: [{
+            name: 'Peter',
+            progress: 20
+        }, {
+            name: 'Ann',
+            progress: 18
+        }],
+
+        pro: [{
+            name: 'Sam',
+            progress: 10
+        }],
+
+        some: {
+            students: [{
+                name: `test`,
+                progress: 41.6
+        }]
+        }
+    }
+};
+
+function getProgressByIter (data) {
+    let total = 0,
+        students = 0;
+        
+        for ( let course of Object.values(data)) {
+            if (Array.isArray(course)) {
+                students += course.length;
+                
+                for ( let i = 0; i < course.length; i++) {
+                    total += course[i].progress
+        }  
+    }
+          else{ 
+                for( let subCourse of Object.values(course)) {
+                    students += subCourse.length
+                    
+                    for ( let i = 0; i < subCourse.length; i++) {
+                        total += subCourse[i].progress
+                    }
+                }
+          }
+        }
+    return total / students; 
+}
+// выведение среднего прогресса с помощью итерации
+
+// console.log(getProgressByIter(students));
+
+function getStudentByRecursion (data1) {
+    if (Array.isArray(data1)) {
+        let total = 0 ;         
+            
+        for ( let i = 0; i < data1.length; i++) {
+                total += data1[i].progress;
+    }  
+    return [total , data1.length];
+        }  else{ 
+        let total = [0, 0];
+
+        for ( let subData of Object.values(data1)){
+            const subDataArr = getStudentBy(subData);
+            total[0] += subDataArr[0];
+            total[1] += subDataArr[1];
+        }
+        return total;
+    }
+
+}
+
+const result = getStudentByRecursion(students);
+// выведение среднего прогресса с помощью рекурсии
+console.log(result[0]/result[1]);
