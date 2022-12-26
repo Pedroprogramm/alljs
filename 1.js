@@ -237,3 +237,22 @@ function getStudentByRecursion (data1) {
 const result = getStudentByRecursion(students);
 // выведение среднего прогресса с помощью рекурсии
 console.log(result[0]/result[1]);
+
+
+
+function animation () {
+    let pos = 0;
+    const id = setInterval(frame, 10);
+  
+    function frame() {
+      if (pos === 100) {
+        clearInterval(id);
+      } else {
+        pos++;
+        animationBtn.style.top = pos + 'px';
+      }
+    };}
+  
+    animationBtn.addEventListener('click', animation)
+      
+// простая анимация с перемещением при нажатии вниз
